@@ -1,0 +1,44 @@
+package com.webjjang.board.vo;
+
+public class BoardVO {
+	
+	private long no;
+	private String title, writer, writeDate;
+	public long getNo() {
+		return no;
+	}
+	public void setNo(long no) {
+		this.no = no;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	public String getWriteDate() {
+		return writeDate;
+	}
+	public void setWriteDate(String writeDate) {
+		this.writeDate = writeDate;
+	}
+	public long getHit() {
+		return hit;
+	}
+	public void setHit(long hit) {
+		this.hit = hit;
+	}
+	private long hit;
+	@Override
+	public String toString() {
+		return "BoardVO [no=" + no + ", title=" + title + ", writer=" + writer + ", writeDate=" + writeDate + ", hit="
+				+ hit + "]";
+	}
+	
+}

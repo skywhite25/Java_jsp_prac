@@ -1,0 +1,54 @@
+package image.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import image.vo.ImageVO;
+import util.db.DBInfo;
+import util.db.DBSQL;
+
+public class ImageDAO {
+	
+	// 필요한 객체 선언
+	Connection con = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	
+	
+	// 3.게시글 등록
+	public int write(ImageVO vo) throws Exception {
+		int result = 0;
+		
+		try {
+			// 1. 2.
+			con = DBInfo.getConnection();
+			// 3. 4.
+			pstmt = con.prepareStatement(DBSQL.FASHION_WRITE);
+//			pstmt.setLong(1, vo.getSeasonNo());
+			pstmt.setString(1, vo.getName1());
+			pstmt.setString(2, vo.getLink1());
+			pstmt.setString(3, vo.getName2());
+			pstmt.setString(4, vo.getLink2());
+			pstmt.setString(5, vo.getName3());
+			pstmt.setString(6, vo.getLink3());
+			pstmt.setString(7, vo.getName4());
+			pstmt.setString(8, vo.getLink4());
+			pstmt.setString(9, vo.getFileName());
+			// 5.
+			result = pstmt.executeUpdate();
+			System.out.println("ImageDAO.write() [result] : " + result);
+			// 6.
+			System.out.println("ImageDAO.write() - 게시글 등록 완료");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			throw new Exception("ImageDAO.write() DB처리 중 오류 발생");
+		} finally {
+			DBInfo.close(con, pstmt);
+		}
+		
+		return result;
+	}
+	
+}

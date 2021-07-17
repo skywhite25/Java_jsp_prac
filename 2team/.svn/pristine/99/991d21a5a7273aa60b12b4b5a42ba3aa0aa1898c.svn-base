@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function jquery(){
+	alert("test");
+	nameFunc();
+}
+
+// 변수나 함수의 이름을 만드는 규칙 중 맨 앞글자가 영문자나 "_", "$" 
+function $(){
+// 	alert("$의 test");
+	jquery();
+}
+
+// $("selector") : 객체를 선택할 때 사용 -> td는 tag, .td는 class, #td는 id를 의미한다.
+// 함수를 전달해서 사용하는 방법
+// 1. 변수에 함수를 저장해놨다가 실행하는 방법
+// function() : 익명함수, ()앞에 이름이 없으므로 변수를 호출하여 사용(자바스크립트에서만 허용하고 자바에서는 허용하지 않음)
+var nameFunc = function(){
+	alert("lee");
+}
+
+// 파라메터로 반드시 함수를 넘겨서 넘겨진 함수를 실행해준다.
+function exe(func) {
+	func();
+}
+
+// 함수를 전달해서 실행하는 함수
+function paramFunc(){
+	// 위에 선언한 exe함수로 간다.
+	exe(function(){
+		alert("전달된 함수입니다.");
+	});
+}
+
+// 1.이름(데이터)을 입력받아서 경고창을 띄우고(본 처리문) 2.'처리가 완료됨' 을 출력하는 함수 만들어서 처리(후 처리문) -> call back함수
+function callBack(name, callBackFunc){
+	alert(name); // 본 처리문
+	callBackFunc(); // 처리가 다 끝나면 뒤에서 실행되는 후 처리문
+}
+
+// callBack()를 호출하는 함수
+function call(name){
+	callBack(name, function(){
+		alert("처리가 완료됨");
+	});
+}
+
+</script>
+
+</head>
+<body>
+<button onclick="jquery();">jquery호출</button>
+<button onclick="$();">$호출</button>
+<button onclick="paramFunc();">전달함수 실행</button>
+<hr>
+<!-- callBack()에 홍길동이 name으로 들어간다. -->
+<button onclick="call('홍길동');">홍길동</button>
+<button onclick="call('김예림');">김예림</button>
+
+</body>
+</html>

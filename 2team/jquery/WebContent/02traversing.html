@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- jQuery 라이브러리 등록 - CDN방식 -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style type="text/css">
+div.bclass{
+	width: 400px;
+	height: 40px;
+	border: 2px dotted #aaa;
+	margin: 10px;
+}
+</style>
+
+<script type="text/javascript">
+/* 클릭한 것에 해당하는 div의 색상이 빨간색으로 바뀐다 */
+$(function(){
+	// $(".bclass>button") : 클래스 이름이 bclass인 것 아래에 있는 button태그 선택
+	// $(this) = click이벤트가 일어난 button
+	$(".bclass>button").click(function(){
+		//alert("div click");
+		// .parent() : button바로 위의 태그 선택
+		$(this).parent().css("border", "2px dotted red");
+	});
+	
+	// dataRow class 안에 있는 제거 버튼 선택하고 이벤트 처리
+	$(".dataRow button").click(function(){
+		alert("제거 버튼");
+		// parents(selector) : 선택된 객체의 위쪽으로 올라가면서 selector 여러 개를 찾는다.
+		// remove() : 선택된 객체를 지운다.
+		//$(this).parents(".dataRow").remove();
+		
+		// closest(selector) : 선택된 객체의 위쪽으로 처음 나오는 selector를 한 개만 찾는다.
+		$(this).closest(".dataRow").remove();
+	});
+});
+</script>
+
+
+</head>
+
+
+<body>
+<div class="bclass"><button>클릭</button></div>
+<div class="bclass"><button>클릭</button></div>
+<div class="bclass"><button>클릭</button></div>
+
+<div class="dataRow">
+	<div>클릭하면 사라집니다.</div>
+	<div>
+		<input type="file">
+			<button>제거</button>
+	</div>
+</div>
+</body>
+</html>

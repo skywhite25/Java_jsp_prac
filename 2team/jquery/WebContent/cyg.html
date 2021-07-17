@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>새 탭</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<style type="text/css">
+div{
+	width: 600px;
+	height: 30px;
+	margin: 10px;
+	border: 1px solid orange;
+}
+</style>
+
+<script type="text/javascript">
+$(function(){
+	
+	// 처음에 실행되는 처리문
+	// 객체 선택 - 처음(:first)과 마지막(:last) 객체 선택
+	$("div:first").text("first div");
+	$("div:last").text("last div");
+	
+	// table tr - 홀수와 짝수의 tr
+	
+	// 클릭 이벤트 처리
+	$("#showBtn").click(function(){
+		// div 보이게 -> $("div" -> 결과가 object[] -> foreach를 이용해서 각각에 이벤트 처리
+		$("div").show();
+		alert($("div"));
+	});
+	$("#hideBtn").click(function(){
+		// div 가리게 -> $("div" -> 결과가 object[] -> foreach를 이용해서 각각에 이벤트 처리
+		$("div").hide();
+		alert($("div"));
+	});
+	$("#midRedBtn").click(function(){
+		$("#midDiv").css("border-color","red");
+		alert($("#midDiv"));
+	});
+});
+</script>
+
+</head>
+<body>
+<button id="showBtn">보이기</button><button id="hideBtn">숨기기</button>
+<button id="midRedBtn">중간 div red</button>
+<div></div>
+<div id="midDiv"></div>
+<div></div>
+</body>
+</html>

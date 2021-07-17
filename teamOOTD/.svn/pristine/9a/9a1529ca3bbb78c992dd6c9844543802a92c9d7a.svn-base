@@ -1,0 +1,73 @@
+<%@page import="com.OOTD.main.controller.Service"%>
+<%@page import="com.OOTD.main.controller.Beans"%>
+<%@page import="com.OOTD.main.controller.ExeService"%>
+<%@page import="com.OOTD.member.vo.MemberVO"%>
+<%@page import="com.OOTD.member.vo.LoginVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내 정보 보기</title>
+  
+  <!-- 부트스트랩 라이브러리와 마우스가 올라 갔을 때의 CSS는 default_decorator.jsp 에서 전체적으로 잡음. -->
+
+</head>
+<body>
+<div class="container">
+	<h1>내 정보 보기</h1>
+	<table class="table">
+		<tr>
+			<th>아이디</th>
+			<td>${vo.id }</td>
+		</tr>
+		<tr>
+			<th>이름</th>
+			<td>${vo.name }</td>
+		</tr>
+		<tr>
+			<th>성별</th>
+			<td>${vo.gender }</td>
+		</tr>
+		<tr>
+			<th>생년월일</th>
+			<td>${vo.birth }</td>
+		</tr>
+		<tr>
+			<th>연락처</th>
+			<td>${vo.tel }</td>
+		</tr>
+		<tr>
+			<th>이메일</th>
+			<td>${vo.email }</td>
+		</tr>
+		<tr>
+			<th>회원가입일</th>
+			<td>${vo.regDate }</td>
+		</tr>
+		<tr>
+			<th>상태</th>
+			<td>${vo.status }</td>
+		</tr>
+		<tr>
+			<th>등급번호</th>
+			<td>${vo.gradeNo }</td>
+		</tr>
+		<tr>
+			<th>등급명</th>
+			<td>${vo.gradeName }</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<a href="updateForm.do" class="btn btn-default">회원수정</a>
+				<a href="changePwForm.do" class="btn btn-default">비밀번호변경</a>
+				<a href="deleteForm.do" class="btn btn-default">회원탈퇴</a>
+			</td>
+		</tr>
+		
+	</table>
+</div>
+</body>
+</html>

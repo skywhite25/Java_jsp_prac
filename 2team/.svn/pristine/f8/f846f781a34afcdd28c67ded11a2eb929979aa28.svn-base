@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- jQuery 라이브러리 등록 - CDN방식 -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style type="text/css">
+div{
+	width: 600px;
+	height: 30px;
+	margin: 10px;
+	border: 1px solid orange;
+}
+</style>
+
+<script type="text/javascript">
+$(function(){
+	
+	// 처음에 실행되는 처리문
+	// div:first : div 태그 중 첫번째 태그 선택
+	// .text("문장") : "문장" 에 해당하는 문자를 집어넣기
+	$("div:first").text("처음 div");
+	$("div:last").text("마지막 div");
+	
+	// table의 tr중 홀수와 짝수로
+	// 테이블의 너비를 100%만들기
+	//css("속성", "해당하는 값")
+	$("table").css("width", "100%");
+	$("table, tr, td").css("border", "1px solid #444");
+	// table tr:even : table 태그 밑의 tr 태그 중 홀수 선택, odd : 홀수
+	// 짝수는 배열인 경우 0부터 시작한다.
+	$("table tr:even").css("background", "orange");
+	
+	// 이벤트 처리
+	$("#showBtn").click(function(){
+		// div 태그를 보이게 : $("div") -> 결과가 Object[] (Object의 배열) 로 나온다. forEach문을 이용해서 각각의 이벤트를 처리한다.
+		$("div").show();
+		alert($("div"));
+	});
+	
+	$("#hideBtn").click(function(){
+		// div 태그를 안 보이게 : $("div") -> 결과가 Object[] (Object의 배열) 로 나온다. forEach문을 이용해서 각각의 이벤트를 처리한다.
+		$("div").hide();
+	});
+	
+	// 중간에 있는 div tag의 border를 red로 바꾸는 이벤트 처리
+	$("#midRedBtn").click(function(){
+	//css("속성", "색")
+		$("#midDiv").css("border-color", "red");
+		alert($("#midDiv"));
+	});
+	
+});
+</script>
+
+</head>
+
+
+<body>
+<button id="showBtn">보이기</button>
+<button id="hideBtn">숨기기</button>
+<button id="midRedBtn">중간 div red로</button>
+
+<div></div>
+<div id="midDiv"></div>
+<div></div>
+
+<table>
+	<tr>
+		<td>td</td>
+	</tr>
+	<tr>
+		<td>td</td>
+	</tr>
+	<tr>
+		<td>td</td>
+	</tr>
+	<tr>
+		<td>td</td>
+	</tr>
+	<tr>
+		<td>td</td>
+	</tr>
+	<tr>
+		<td>td</td>
+	</tr>
+</table>
+
+</body>
+</html>

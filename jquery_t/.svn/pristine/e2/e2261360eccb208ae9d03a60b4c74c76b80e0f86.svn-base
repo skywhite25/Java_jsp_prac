@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- jQuery 라이브러리 등록 - CDN 방식 -->
+<script type="text/javascript" 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<style type="text/css">
+div{
+	width: 600px;
+	height: 30px;
+	margin: 10px;
+	border: 1px solid orange;
+}
+</style>
+
+<script type="text/javascript">
+$(function(){
+	
+	// 이벤트 처리
+	$("#showBtn").click(function(){
+		// div 보이게 - > $("div") -> 결과가 object[] -> foreach를 이용해서 각각에 이벤트 처리
+		$("div").show();
+	});
+	$("#hideBtn").click(function(){
+		// div 보이게 - > $("div") -> 결과가 object[] -> foreach를 이용해서 각각에 이벤트 처리
+		$("div").hide();
+	});
+	
+});
+</script>
+</head>
+<body>
+<button id="showBtn">보이기</button><button id="hideBtn">숨기기</button>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
