@@ -64,9 +64,9 @@
 					<p>재밌어요</p>
 					<div class="row">
 						<div class="col-9 text-left">
-							성적<span style="color:red;">A</span>
-							널널<span style="color:red;">A</span>
-							강의<span style="color:red;">B</span>
+							성적<span style="color:red;"> A</span>
+							널널<span style="color:red;"> A</span>
+							강의<span style="color:red;"> B</span>
 							<span style="color:green;">(추천 : 15★)</span>
 						</div>
 						<div class="col-3 text-right">
@@ -81,7 +81,7 @@
 					<div class="row">
 						<div class="col-8 text-left">배드민턴&nbsp;<small>태훈김</small></div>
 						<div class="col-8 text-right">
-							종합<span style="color:red;">B</span>
+							종합 <span style="color:red;">B</span>
 					</div>
 				</div>
 			</div>
@@ -92,9 +92,9 @@
 				<p class="card-text">괜찮았어요</p>
 				<div class="row">
 					<div class="col-9 text-left">
-					성적<span style="color:red;">B</span>
-					널널<span style="color:red;">B</span>
-					강의<span style="color:red;">C</span>
+					성적<span style="color:red;"> B</span>
+					널널<span style="color:red;"> B</span>
+					강의<span style="color:red;"> C</span>
 					<span style="color:green;">(추천 : 5★)</span>
 					</div>
 					<div class="col-3 text-right">
@@ -103,13 +103,13 @@
 					</div>
 				</div>
 			</div>		
-		</div>s
+		</div>
 		<div class="card bg-light mt-3">
 			<div class="card-header bg-light">
 				<div class="row">
 					<div class="col-8 text-left">축구&nbsp;<small>이순신</small></div>
-					<div class="col-4 text-right">
-					종합<span style="color:red;">A</span>
+					<div class="col-8 text-right">
+							종합 <span style="color:red;"> A</span>
 					</div>
 				</div>
 			</div>
@@ -123,7 +123,7 @@
 			            성적 <span style="color: red;">A</span>
 			            널널 <span style="color: red;">C</span>
 			            강의 <span style="color: red;">A</span>
-		              	<span style="color: green;">(추천:0★)</span>
+		              	<span style="color: green;">(추천 : 0★)</span>
 					</div>
 					<div class="col-3 text-right">
 						<a onclick="return confirm('추천하시겠습니까?')" href="/likeAction.jsp?evaluationID=">추천</a>
