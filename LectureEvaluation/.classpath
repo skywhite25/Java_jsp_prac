@@ -9,5 +9,8 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/DICT_DEV7/Downloads/mysql-connector-java-8.0.27/mysql-connector-java-8.0.27/mysql-connector-java-8.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/TH/기타라이브러리/jaf-1_1_1/jaf-1.1.1/activation.jar"/>
+	<classpathentry kind="lib" path="C:/TH/기타라이브러리/javamail1_4_7/javamail-1.4.7/mail.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

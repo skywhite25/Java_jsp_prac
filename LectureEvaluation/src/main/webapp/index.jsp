@@ -109,7 +109,7 @@
 				<div class="row">
 					<div class="col-8 text-left">축구&nbsp;<small>이순신</small></div>
 					<div class="col-8 text-right">
-							종합 <span style="color:red;"> A</span>
+							종합 <span style="color:red;"> C</span>
 					</div>
 				</div>
 			</div>
